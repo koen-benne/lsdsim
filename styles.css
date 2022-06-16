@@ -10,6 +10,7 @@ canvas{
 	transform:translate(-50%,-50%);
 	width:100vw;
 	height:50vw;
+  overflow: hidden;
 }
 #overlay{
 	background:rgba(0,0,0,0.7);
