@@ -1,7 +1,7 @@
 let VIDEO=null;
 const SIZE=600;
-const WIDTH = 800;
-const HEIGHT = 400;
+const WIDTH = 400;
+const HEIGHT = 200;
 let CANVAS;
 let INTENSITY;
 let TIME = 0;
@@ -207,7 +207,7 @@ function getPixelValue(data, x, y, xOffset = 0){
 }
 
 function initializeCamera(){
-	let promise=navigator.mediaDevices.getUserMedia({video:true});
+	let promise=navigator.mediaDevices.getUserMedia({video:{facingMode: 'environment'}, audio: false});
 	promise.then(function(signal){
 		VIDEO=document.createElement("video");
 		VIDEO.srcObject=signal;
